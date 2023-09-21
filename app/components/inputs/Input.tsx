@@ -1,0 +1,132 @@
+"use client";
+
+import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
+import { BiDollar } from "react-icons/bi";
+
+interface InputProps {
+  id: string;
+  label: string;
+  type?: "text" | "textarea" | "number"; // Add "textarea" as a valid type
+  disabled?: boolean;
+  formatPrice?: boolean;
+  required?: boolean;
+  register: UseFormRegister<FieldValues>;
+  errors: FieldErrors;
+  size?: string;
+}
+
+const Input: React.FC<InputProps> = ({
+  id,
+  label,
+  type = "text",
+  disabled,
+  formatPrice,
+  register,
+  required,
+  errors,
+  size,
+}) => {
+  const isTextarea = type === "textarea"; // Check if type is "textarea"
+
+  return (
+    <div className="w-full relative">
+      {formatPrice && (
+        <BiDollar
+          size={24}
+          className="
+            text-neutral-700
+            absolute
+            top-5
+            left-2
+          "
+        />
+      )}
+
+      {isTextarea ? ( // Conditional rendering based on type
+        <textarea
+          id={id}
+          disabled={disabled}
+          {...register(id, { required })}
+          placeholder=" "
+          className={`
+            peer
+            w-full
+            p-4
+            pt-6 
+            font-light 
+            bg-white 
+            border-2
+            rounded-md
+            outline-none
+            transition
+            disabled:opacity-70
+            disabled:cursor-not-allowed
+            ${size}
+            ${formatPrice ? "pl-9" : "pl-4"}
+            ${errors[id] ? "border-rose-500" : "border-neutral-300"}
+            ${
+              errors[id]
+                ? "focus:border-rose-500 focus:bg-rose-50 focus:z-50 relative"
+                : "focus:border-green-400 focus:bg-green-50 focus:z-50 relative"
+            }
+          `}
+        />
+      ) : (
+        <input
+          id={id}
+          disabled={disabled}
+          {...register(id, { required })}
+          placeholder=" "
+          type={type}
+          className={`
+            peer
+            w-full
+            p-4
+            pt-6 
+            font-light 
+            bg-white 
+            border-2
+            rounded-md
+            outline-none
+            transition
+            disabled:opacity-70
+            disabled:cursor-not-allowed
+            ${size}
+            ${formatPrice ? "pl-9" : "pl-4"}
+            ${errors[id] ? "border-rose-500" : "border-neutral-300"}
+            ${
+              errors[id]
+                ? "focus:border-rose-500 focus:bg-rose-50"
+                : "focus:border-green-400 focus:bg-green-50"
+            }
+          `}
+        />
+      )}
+
+      <label
+        className={`
+          absolute 
+          text-sm
+          duration-150 
+          transform 
+          -translate-y-3 
+          top-5 
+          z-10 
+          origin-[0] 
+          ${formatPrice ? "left-9" : "left-4"}
+          peer-placeholder-shown:scale-100 
+          peer-placeholder-shown:translate-y-0 
+          peer-focus:scale-75
+          peer-focus:-translate-y-4
+          focus:text-zinc-50
+
+          ${errors[id] ? "text-rose-500" : "text-zinc-400"}
+        `}
+      >
+        {label}
+      </label>
+    </div>
+  );
+};
+
+export default Input;
