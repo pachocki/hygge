@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic'
 import EmptyState from "../components/EmptyState";
 import getListings, { IListingsParams } from "../actions/getListings";
 import getCurrentUser from "../actions/getCurrentUser";
@@ -8,7 +9,7 @@ import About from "../components/homepage/About";
 import Recomended from "../components/homepage/Recomended";
 import Instagram from "../components/homepage/Instagram";
 import Newsletter from "../components/homepage/Newsletter";
-export const dynamic = 'force-dynamic'
+
 interface HomeProps {
   searchParams: IListingsParams;
 }

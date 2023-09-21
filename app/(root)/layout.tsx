@@ -1,5 +1,5 @@
+export const dynamic = 'force-dynamic'
 import getCurrentUser from "../actions/getCurrentUser";
-import Hero from "../components/Hero";
 import LoginModal from "../components/modals/LoginModal";
 import RegisterModal from "../components/modals/RegisterModal";
 import RentModal from "../components/modals/RentModal";

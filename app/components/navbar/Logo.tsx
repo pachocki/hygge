@@ -1,8 +1,8 @@
 "use client";
-import { Bagel_Fat_One } from "next/font/google";
+import { Skranji } from "next/font/google";
 import Link from "next/link";
 
-const logo = Bagel_Fat_One({ weight: "400", subsets: ["latin"] });
+const logo = Skranji({ weight: "400", subsets: ["latin"] });
 interface LogoProps{
   color: string;
   size?:string,
