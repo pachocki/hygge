@@ -41,7 +41,7 @@ const ListingsGrid: React.FC<ListingsGridProps> = ({
       </div>
       <Categories />
       <Container>
-        <div className="px-5 py-10 ">
+        <div className="px-5 py-10 sm:px-0 ">
           <Swiper
             pagination={{
               clickable: true,
@@ -51,7 +51,7 @@ const ListingsGrid: React.FC<ListingsGridProps> = ({
             breakpoints={{
               490: {
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 0,
               },
               491: {
                 slidesPerView: 2,

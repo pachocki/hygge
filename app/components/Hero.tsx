@@ -52,7 +52,7 @@ const Hero = () => {
                   <div className="bg-gray-400 w-2/3 h-6  rounded-lg sm:hidden"></div>
                 </div>
               </div>
-              <div className="flex items-center gap-2 w-auto px-5 py-2 absolute  bg-pink-200   rounded-lg right-2 top-[-10px] ">
+              <div className="flex items-center gap-2 w-auto px-5 py-2 absolute  bg-pink-200   rounded-lg right-2 top-[-10px] sm:top-[-25px] ">
                 <AiFillCheckCircle className="text-2xl" />
                 <span className="text-2xl lg:text-xl sm:text-lg">Booked</span>
               </div>
