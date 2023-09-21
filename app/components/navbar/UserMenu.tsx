@@ -84,9 +84,12 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           <div className="flex z-20 relative flex-col gap-2 w-[30vh] sm:w-[20vh]">
             {currentUser ? (
               <>
-              <MenuItem
+                <MenuItem
                   label="Discover"
-                  onClick={() => router.push("/discover")}
+                  onClick={() => {
+                    router.push("/discover");
+                    toggleOpen();
+                  }}
                 />
                 <MenuItem
                   label="My trips"
@@ -124,7 +127,10 @@ const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
               <>
                 <MenuItem
                   label="Discover"
-                  onClick={() => router.push("/discover")}
+                  onClick={() => {
+                    router.push("/discover");
+                    toggleOpen();
+                  }}
                 />
                 <MenuItem label="Login" onClick={loginModal.onOpen} />
                 <MenuItem label="Sign up" onClick={registerModal.onOpen} />

@@ -83,7 +83,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
         </div>
         <div className=" h-[25vh] px-2 pb-4 flex flex-col gap-2">
           <div className="text-start">
-            <span className="font-semibold  text-lg text-start lg:text-sm sm:text-xl ">{data.title}</span>
+            <span className="font-semibold  text-lg text-start lg:text-sm sm:text-lg ">{data.title}</span>
           </div>
           <div className="flex items-center">
             <BiMap />
@@ -97,7 +97,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
             </span>
           </div>
           <div className="flex items-center gap-1">
-            <div className="font-semibold 2xl:text-xl sm:text-xl">Price:${price}</div>
+            <div className="font-semibold 2xl:text-xl sm:text-lg">Price:${price}</div>
             {!reservation && <div className="font-semibold sm:text-lg">night</div>}
           </div>
          
