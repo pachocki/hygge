@@ -4,7 +4,7 @@ import useSearchModal from "@/app/hooks/useSearchModal";
 import { differenceInDays } from "date-fns";
 import { useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import { HiArrowNarrowRight as Arrow } from "react-icons/Hi";
+import { HiArrowNarrowRight as Arrow } from "react-icons/hi";
 const Search = () => {
   const searchModal = useSearchModal();
   const params = useSearchParams();
