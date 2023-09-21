@@ -70,7 +70,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
       onClick={() => router.push(`/discover/listings/${data.id}`)} 
     >
       <div className="flex flex-col gap-2  shadow-lg rounded-xl overflow-hidden sm:w-full hover:shadow-xl ">
-        <div className="h-[27vh] w-full  relative overflow-hidden 2xl:h-[30vh] md:h-[200px]">
+        <div className="h-[27vh] w-full  relative overflow-hidden 2xl:h-[30vh] md:h-[200px] sm:h-[50vh]">
           <Image
             fill
             alt="listing"
@@ -83,11 +83,11 @@ const ListingCard: React.FC<ListingCardProps> = ({
         </div>
         <div className=" h-[25vh] px-2 pb-4 flex flex-col gap-2">
           <div className="text-start">
-            <span className="font-semibold  text-lg text-start lg:text-sm ">{data.title}</span>
+            <span className="font-semibold  text-lg text-start lg:text-sm sm:text-xl ">{data.title}</span>
           </div>
           <div className="flex items-center">
             <BiMap />
-            <span className="lg:text-sm">
+            <span className="lg:text-sm ">
               {location?.region},{location?.label}
             </span>
           </div>
@@ -97,8 +97,8 @@ const ListingCard: React.FC<ListingCardProps> = ({
             </span>
           </div>
           <div className="flex items-center gap-1">
-            <div className="font-semibold 2xl:text-xl sm:text-sm">Price:${price}</div>
-            {!reservation && <div className="font-semibold sm:text-sm">night</div>}
+            <div className="font-semibold 2xl:text-xl sm:text-xl">Price:${price}</div>
+            {!reservation && <div className="font-semibold sm:text-lg">night</div>}
           </div>
          
           {onAction && actionLabel && (

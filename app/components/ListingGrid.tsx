@@ -41,7 +41,7 @@ const ListingsGrid: React.FC<ListingsGridProps> = ({
       </div>
       <Categories />
       <Container>
-        <div className="px-5 py-10 sm:px-0 ">
+        <div className="px-5 py-10 xs:px-0  ">
           <Swiper
             pagination={{
               clickable: true,

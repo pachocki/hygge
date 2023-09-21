@@ -39,7 +39,7 @@ const Hero = () => {
             </div>
           </div>
           <div className="w-1/2 flex xl:justify-end items-end  sm:w-full sm:h-1/2">
-            <div className="w-[70%] bg-[#f4ccb7] mb-[3rem] px-2 rounded-lg relative xl:w-full lg:w-[90%] md:w-full  md:mb-1 sm:h-1/4 sm:w-3/5 sm:mb-10 xs:w-full xs:mx-2">
+            <div className="w-[70%] bg-[#f4ccb7] mb-[3rem] px-2 rounded-lg relative xl:w-full lg:w-[90%] md:w-full  md:mb-1 sm:h-1/4 sm:w-[75%] sm:mb-10 xs:w-full xs:mx-2">
               <div className="flex justify-around items-center h-full w-full">
                 <div className="bg-pink-400 rounded-full text-4xl w-20 h-20 flex justify-center items-center lg:text-2xl lg:w-14 lg:h-14 sm:w-10 sm:h-10 ">
                   <BsHouseFill className="sm:text-sm" />
